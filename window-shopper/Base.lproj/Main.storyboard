@@ -28,28 +28,53 @@
                                     <constraint firstAttribute="height" constant="60" id="uCu-eb-40G"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mxe-9S-7Jo" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
-                                <rect key="frame" x="77" y="152" width="220" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mxe-9S-7Jo" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="150" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bL8-9W-3D6"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UG8-O3-ESN" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="215" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jbe-mW-boM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="p10-pG-Qid" firstAttribute="leading" secondItem="ODa-Ov-eFd" secondAttribute="leading" id="46r-WL-OLj"/>
+                            <constraint firstItem="ODa-Ov-eFd" firstAttribute="trailing" secondItem="mxe-9S-7Jo" secondAttribute="trailing" constant="20" id="Gw9-Jz-kBA"/>
                             <constraint firstItem="p10-pG-Qid" firstAttribute="trailing" secondItem="ODa-Ov-eFd" secondAttribute="trailing" id="Lnx-KK-oXs"/>
                             <constraint firstItem="VaZ-wb-eHp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P96-kc-Wz7"/>
+                            <constraint firstItem="UG8-O3-ESN" firstAttribute="height" secondItem="mxe-9S-7Jo" secondAttribute="height" id="Qkn-aE-X33"/>
                             <constraint firstItem="p10-pG-Qid" firstAttribute="bottom" secondItem="ODa-Ov-eFd" secondAttribute="bottom" id="RLD-nX-NTR"/>
                             <constraint firstItem="p10-pG-Qid" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SG7-hR-XCt"/>
+                            <constraint firstItem="mxe-9S-7Jo" firstAttribute="leading" secondItem="ODa-Ov-eFd" secondAttribute="leading" constant="20" id="cpJ-cA-9oW"/>
                             <constraint firstItem="VaZ-wb-eHp" firstAttribute="top" secondItem="ODa-Ov-eFd" secondAttribute="top" constant="35" id="ebW-uk-rMj"/>
+                            <constraint firstItem="UG8-O3-ESN" firstAttribute="top" secondItem="mxe-9S-7Jo" secondAttribute="bottom" constant="25" id="kVb-H6-kq0"/>
+                            <constraint firstItem="UG8-O3-ESN" firstAttribute="trailing" secondItem="mxe-9S-7Jo" secondAttribute="trailing" id="kxo-KH-hwl"/>
+                            <constraint firstItem="mxe-9S-7Jo" firstAttribute="top" secondItem="VaZ-wb-eHp" secondAttribute="bottom" constant="35" id="mOi-22-luK"/>
+                            <constraint firstItem="UG8-O3-ESN" firstAttribute="leading" secondItem="mxe-9S-7Jo" secondAttribute="leading" id="q3W-xc-I1k"/>
+                            <constraint firstItem="UG8-O3-ESN" firstAttribute="leading" secondItem="ODa-Ov-eFd" secondAttribute="leading" constant="20" id="q5j-6Z-ca1"/>
+                            <constraint firstItem="ODa-Ov-eFd" firstAttribute="trailing" secondItem="UG8-O3-ESN" secondAttribute="trailing" constant="20" id="rR2-sJ-AQO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ODa-Ov-eFd"/>
                     </view>
+                    <connections>
+                        <outlet property="txtPrice" destination="UG8-O3-ESN" id="c4R-eV-TDF"/>
+                        <outlet property="txtWage" destination="mxe-9S-7Jo" id="bLH-fd-tMr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
     </scenes>
     <resources>
